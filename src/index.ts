@@ -27,16 +27,16 @@ type UpdateParams = {
   lastName: string;
 };
 clearScreenDown;
-// async function updateUser(
-//   username: string,
-//   { firstName, lastName }: UpdateParams
-// ) {
-// 	const updatedUser = await prisma.user.update({
-// 		email: username,
-// 	},
-// 		data: {
-// 			firstName,
-// 			lastName
+async function updateUser(
+  username: string,
+  { firstName, lastName }: UpdateParams
+) {
+	const updatedUser = await prisma.user.update({
+		email: username,
+	},
+		data: {
+			firstName,
+			lastName
 
-// 	})
-// }
+	})
+}
